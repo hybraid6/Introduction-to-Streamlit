@@ -8,15 +8,28 @@
 # nltk (Natural Language Toolkit) library for various text processing tasks
 import nltk
 import streamlit as st  # Streamlit is used for building interactive web applications
+import string  # Python's built-in library for handling strings and punctuation
+
+# Check for necessary NLTK resources and download them if not found
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords', quiet=True)
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', quiet=True)
+
+try:
+    nltk.data.find('corpora/wordnet')
+except LookupError:
+    nltk.download('wordnet', quiet=True)
+
 from nltk.tokenize import word_tokenize, sent_tokenize  # Tokenizers for splitting text into words and sentences
 from nltk.corpus import stopwords  # List of common words (stopwords) that are usually removed from text (like "is", "the", "and")
 from nltk.stem import WordNetLemmatizer  # Lemmatizer to reduce words to their base form (e.g., 'running' -> 'run')
-import string  # Python's built-in library for handling strings and punctuation
 
-# Ensure necessary NLTK resources are downloaded
-nltk.download('punkt', quiet=True)
-nltk.download('stopwords', quiet=True)
-nltk.download('wordnet', quiet=True)
 
 # Load stopwords and initialize lemmatizer
 stop_words = set(stopwords.words('english'))  # Load a set of common English stopwords to filter out later
