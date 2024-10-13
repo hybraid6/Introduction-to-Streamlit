@@ -40,7 +40,7 @@ def preprocess(sentence):
 def load_text():
     try:
         # Provide the path to the text file
-        file_path = r'C:\Users\pc\Desktop\B-older\Data and Stuff\GMC\ML GMC\alice_in_wonderland.txt'
+        file_path = 'alice_in_wonderland.txt'
         
         # Open the file, read its content, and replace newline characters with spaces
         with open(file_path, 'r', encoding='utf-8') as file:
