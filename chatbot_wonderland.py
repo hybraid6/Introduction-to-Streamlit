@@ -13,10 +13,10 @@ from nltk.corpus import stopwords  # List of common words (stopwords) that are u
 from nltk.stem import WordNetLemmatizer  # Lemmatizer to reduce words to their base form (e.g., 'running' -> 'run')
 import string  # Python's built-in library for handling strings and punctuation
 
-# Uncomment to download necessary NLTK resources if not done already
-# nltk.download('punkt')
-# nltk.download('stopwords')
-# nltk.download('wordnet')
+# Ensure necessary NLTK resources are downloaded
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
 
 # Load stopwords and initialize lemmatizer
 stop_words = set(stopwords.words('english'))  # Load a set of common English stopwords to filter out later
