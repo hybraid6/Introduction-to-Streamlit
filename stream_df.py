@@ -12,4 +12,4 @@ df = pd.DataFrame(data)
 st.write("### DataFrame Example")
 st.dataframe(df)  # Display the dataframe
 
-    
+# Just a useless comment    
