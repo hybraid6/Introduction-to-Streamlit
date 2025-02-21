@@ -8,8 +8,8 @@ import streamlit as st
 from sklearn.model_selection import train_test_split
 
 # Load the Telco Customer Churn dataset
-df = pd.read_csv(r"C:\Users\pc\Desktop\B-older\Data and Stuff\GMC\ML GMC\Ameerah\Updated_churn_dataset.csv")
-df2 = pd.read_csv(r"C:\Users\pc\Desktop\B-older\Data and Stuff\GMC\ML GMC\Ameerah\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+df = pd.read_csv("Updated_churn_dataset.csv")
+df2 = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
 
 # Add a title and description to the app
 st.title("Ameerah's Churn prediction model")
