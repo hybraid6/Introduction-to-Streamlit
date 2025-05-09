@@ -3,3 +3,5 @@ matplotlib
 nltk
 opencv-python
 catboost
+imbalanced-learn
+gdown
